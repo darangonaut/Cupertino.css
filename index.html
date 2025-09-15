@@ -32,13 +32,11 @@
             <h4>Heading 4 - Title 3</h4>
             <h5>Heading 5 - Headline</h5>
             <h6>Heading 6 - Subheadline</h6>
-
-            <p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>. It demonstrates the
-                typography system inspired by Apple's design language.</p>
-
-            <p>This is another paragraph to show spacing. You can also use <code>inline code</code> for technical
-                content.</p>
-
+            
+            <p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>. It demonstrates the typography system inspired by Apple's design language.</p>
+            
+            <p>This is another paragraph to show spacing. You can also use <code>inline code</code> for technical content.</p>
+            
             <blockquote>
                 "Design is not just what it looks like and feels like. Design is how it works."
                 <footer>— Steve Jobs</footer>
@@ -50,19 +48,19 @@
             <form>
                 <fieldset>
                     <legend>Personal Information</legend>
-
+                    
                     <label for="name">Full Name</label>
                     <input type="text" id="name" placeholder="Enter your full name">
-
+                    
                     <label for="email">Email Address</label>
                     <input type="email" id="email" placeholder="Enter your email">
-
+                    
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" placeholder="Enter your phone number">
-
+                    
                     <label for="message">Message</label>
                     <textarea id="message" placeholder="Enter your message here..."></textarea>
-
+                    
                     <label for="country">Country</label>
                     <select id="country">
                         <option>Slovakia</option>
@@ -72,7 +70,7 @@
                         <option>Poland</option>
                     </select>
                 </fieldset>
-
+                
                 <button type="submit">Submit Form</button>
                 <button type="button" disabled>Disabled Button</button>
             </form>
@@ -80,7 +78,56 @@
 
         <section id="components">
             <h2>Components</h2>
-
+            
+            <h3>Form Controls</h3>
+            <p>Progress bar:</p>
+            <progress value="70" max="100">70%</progress>
+            
+            <p>Range slider:</p>
+            <input type="range" min="0" max="100" value="30">
+            
+            <p>Checkboxes and radio buttons:</p>
+            <label><input type="checkbox" checked> I agree to the terms</label><br>
+            <label><input type="checkbox"> Send me newsletters</label><br><br>
+            
+            <label><input type="radio" name="plan" value="basic" checked> Basic Plan</label><br>
+            <label><input type="radio" name="plan" value="pro"> Pro Plan</label><br>
+            <label><input type="radio" name="plan" value="enterprise"> Enterprise Plan</label>
+            
+            <h3>Messages & Alerts</h3>
+            <aside>
+                <strong>Information:</strong> This is a general information message.
+            </aside>
+            
+            <aside role="status">
+                <strong>Success:</strong> Your form has been submitted successfully!
+            </aside>
+            
+            <aside role="alert">
+                <strong>Error:</strong> Please check your input and try again.
+            </aside>
+            
+            <h3>Interactive Elements</h3>
+            <p>Accordion/Collapsible content:</p>
+            <details>
+                <summary>What is Cupertino.css?</summary>
+                <p>Cupertino.css is a classless CSS framework inspired by Apple's design language. It provides beautiful styling without requiring any CSS classes in your HTML.</p>
+            </details>
+            
+            <details>
+                <summary>How to use it?</summary>
+                <p>Simply include the CSS file in your HTML and write semantic markup. The framework will automatically style your content with Apple-inspired design.</p>
+            </details>
+            
+            <h3>Badges and Tags</h3>
+            <p>Use <mark>mark elements</mark> for badges and <mark>highlighted content</mark> that stands out.</p>
+            
+            <h3>Keyboard Shortcuts</h3>
+            <p>Press <kbd>⌘</kbd> + <kbd>C</kbd> to copy, or <kbd>Ctrl</kbd> + <kbd>V</kbd> to paste.</p>
+            
+            <h3>Loading States</h3>
+            <button class="loading">Loading Button</button>
+            
             <h3>Table</h3>
             <table>
                 <thead>
@@ -112,7 +159,7 @@
                     </tr>
                 </tbody>
             </table>
-
+            
             <h3>Lists</h3>
             <ul>
                 <li>Clean and minimal design</li>
@@ -121,7 +168,7 @@
                 <li>Responsive design</li>
                 <li>No classes required</li>
             </ul>
-
+            
             <ol>
                 <li>Download the CSS file</li>
                 <li>Link it in your HTML</li>
@@ -132,14 +179,13 @@
 
         <section id="examples">
             <h2>Examples</h2>
-
+            
             <article>
                 <h3>Card Example</h3>
-                <p>This is an example of a card component. It uses the <code>article</code> element and gets automatic
-                    styling with shadows, padding, and rounded corners.</p>
+                <p>This is an example of a card component. It uses the <code>article</code> element and gets automatic styling with shadows, padding, and rounded corners.</p>
                 <p><a href="#">Learn more about this topic</a></p>
             </article>
-
+            
             <article>
                 <h3>Code Example</h3>
                 <p>Here's how you can display code blocks:</p>
@@ -157,7 +203,7 @@
         </section>
 
         <hr>
-
+        
         <footer class="text-center">
             <p><small>Cupertino.css • Inšpirované Apple Design System • MIT License</small></p>
         </footer>
