@@ -309,7 +309,7 @@ ul li::before {
     content: "•";
     color: var(--primary-blue);
     position: absolute;
-    left: -var(--spacing-md);
+    left: calc(-1 * var(--spacing-md));
     font-weight: bold;
 }
 
