@@ -307,16 +307,22 @@ li {
   color: var(--label-primary);
 }
 
-ul li {
+ul {
   list-style: none;
+  padding-left: 0;
+}
+
+ul li {
   position: relative;
+  padding-left: var(--spacing-lg); /* Indent text to make space for the bullet */
 }
 
 ul li::before {
   content: "•";
   color: var(--primary-blue);
   position: absolute;
-  left: -var(--spacing-md);
+  left: var(--spacing-sm); /* Position bullet within the padding */
+  top: 0;
   font-weight: bold;
 }
 
@@ -354,6 +360,167 @@ blockquote {
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   font-style: italic;
   color: var(--label-secondary);
+}
+
+/* Messages & Alerts */
+aside {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--separator);
+  background-color: var(--background-secondary);
+  color: var(--label-primary);
+}
+
+aside strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+aside[role="status"] {
+  border-color: var(--green);
+  background-color: color-mix(in srgb, var(--green) 10%, transparent);
+  color: var(--green);
+}
+
+aside[role="alert"] {
+  border-color: var(--red);
+  background-color: color-mix(in srgb, var(--red) 10%, transparent);
+  color: var(--red);
+}
+
+/* Accordion (Details/Summary) */
+details {
+  background-color: var(--background-tertiary);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+details[open] {
+  background-color: var(--background-secondary);
+}
+
+summary {
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  position: relative;
+  color: var(--label-primary);
+  list-style: none; /* Remove default marker */
+}
+
+summary::after {
+  content: "›"; /* Custom arrow */
+  position: absolute;
+  right: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.2s ease;
+  font-size: 1.5rem;
+  line-height: 0;
+  color: var(--secondary-gray);
+}
+
+details[open] summary::after {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+details p {
+  padding: 0 var(--spacing-lg) var(--spacing-md);
+  margin-bottom: 0;
+  color: var(--label-secondary);
+}
+
+/* Progress Bar */
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--quaternary-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--quaternary-gray);
+  border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--primary-blue);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--primary-blue);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Keyboard Shortcuts */
+kbd {
+  display: inline-block;
+  padding: 3px 6px;
+  font-family: var(--font-family-system);
+  font-size: 0.85em;
+  line-height: 1;
+  color: var(--label-primary);
+  background-color: var(--background-secondary);
+  border: 1px solid var(--separator);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Badges and Tags */
+mark {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.2em 0.6em;
+  border-radius: var(--radius-sm);
+  font-size: 0.85em;
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+}
+
+/* Loading Button */
+button.loading {
+  position: relative;
+  pointer-events: none;
+  color: transparent !important;
+}
+
+button.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /* Layout */
