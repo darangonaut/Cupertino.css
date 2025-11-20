@@ -638,3 +638,48 @@ nav a:hover {
     animation: none !important;
   }
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--label-primary);
+    background: var(--background-tertiary);
+    transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+    background: var(--background-secondary);
+    color: var(--primary-blue);
+}
+
+.pagination .current {
+    background: var(--primary-blue);
+    color: white;
+    font-weight: var(--font-weight-semibold);
+}
+
+.pagination .disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pagination .dots {
+    background: transparent;
+    pointer-events: none;
+}
