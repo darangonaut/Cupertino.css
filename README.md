@@ -15,6 +15,18 @@ Cupertino.css is a lightweight, classless CSS framework inspired by Apple’s de
 
 ## Installation
 
+### 1. Using CDN (Recommended)
+The easiest way to use Cupertino.css is to include it via jsDelivr CDN. Just add this line to your `<head>`:
+
+```html
+<!-- Always get the latest version (not recommended for production) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/darangonaut/Cupertino.css/cupertino.css">
+
+<!-- Or use a specific version (recommended) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/darangonaut/Cupertino.css@v1.0.0/cupertino.css">
+```
+
+### 2. Manual Installation
 Download the `cupertino.css` file and include it in your project:
 
 ```html
