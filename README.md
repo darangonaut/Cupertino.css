@@ -9,8 +9,10 @@ Cupertino.css is a lightweight, classless CSS framework inspired by Apple’s de
 - 🍏 **Apple-inspired Design:** Clean, modern aesthetic with SF Pro-like typography.
 - 🎨 **Classless:** Styles default HTML tags directly.
 - 🌫️ **Glassmorphism:** Native support for frosted glass effects (backdrop blur + saturation) in navigation and modals.
-- 🌙 **Dark Mode:** Automatic support based on system preferences.
-- 🎚️ **iOS Controls:** Custom styles for Switches, Sliders, and Selects.
+- 🌙 **Dark Mode:** Automatic support based on system preferences (`color-scheme` aware native controls).
+- 🎚️ **iOS Controls:** Custom styles for Switches, Sliders, Selects, Checkboxes, and Radios.
+- 🧩 **Rich Defaults:** Styled tables, messages/alerts, accordions, cards, badges, blockquotes, code blocks, and pagination.
+- ♿ **Accessible:** Visible `:focus-visible` rings on all interactive elements; respects `prefers-reduced-motion`.
 - 📱 **Responsive:** Mobile-first approach with balanced typography.
 
 ## Installation
@@ -23,7 +25,7 @@ The easiest way to use Cupertino.css is to include it via jsDelivr CDN. Just add
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/darangonaut/Cupertino.css/cupertino.css">
 
 <!-- Or use a specific version (recommended) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/darangonaut/Cupertino.css@v1.0.0/cupertino.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/darangonaut/Cupertino.css@v1.0.1/cupertino.css">
 ```
 
 ### 2. Manual Installation
@@ -74,6 +76,31 @@ Use the native `<dialog>` element. It automatically gets the frosted glass backd
 </nav>
 ```
 
+### 4. Messages & Alerts
+Use the `<aside>` element. The `role` attribute switches the accent color (default → blue/gray, `status` → green, `alert` → red).
+
+```html
+<aside><strong>Info:</strong> A general message.</aside>
+<aside role="status"><strong>Success:</strong> Saved!</aside>
+<aside role="alert"><strong>Error:</strong> Something went wrong.</aside>
+```
+
+### 5. Range Slider
+A plain range input gets an iOS-style track and thumb automatically.
+
+```html
+<input type="range" min="0" max="100" value="50">
+```
+
+### 6. Loading Button
+Add the `loading` class to a button to show a spinner and disable interaction.
+
+```html
+<button class="loading">Saving…</button>
+```
+
+Other styled elements work out of the box with semantic markup: `<table>`, `<blockquote>`, `<details>`/`<summary>` (accordion), `<mark>` (badge), `<kbd>`, `<progress>`, and a `.pagination` container.
+
 ## Standard HTML Example
 
 ```html
@@ -96,6 +123,10 @@ Use the native `<dialog>` element. It automatically gets the frosted glass backd
   </body>
 </html>
 ```
+
+## Browser Support
+
+Cupertino.css ships as a single file with no build step and uses modern CSS — native nesting (`&`), `:has()`, `color-mix()`, and `@supports`. It targets evergreen browsers (Chrome/Edge 120+, Safari 17+, Firefox 121+). On older engines styling degrades gracefully to readable defaults.
 
 ## Contributing
 
